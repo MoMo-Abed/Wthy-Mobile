@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Text, View , ScrollView,Dimensions } from 'react-native'
-import {H1,H2 } from 'native-base';
+import {H1,H2,Header,Left,Body } from 'native-base';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 const {height} = Dimensions.get('window');
 
@@ -27,6 +28,15 @@ export default class PrivacyPolicyMainView extends Component {
                     onContentSizeChange={this.onContentSizeChange}
                     >
       <View>
+        <Header style={{backgroundColor:'#333333'}} androidStatusBarColor="#333333"   >
+        <Left>
+            <Icon color='white' onPress={()=>console.log('menu clicked')}    size={20} name='bars' />
+          </Left>
+          <Body>
+          <Text style={{fontSize:20,color:'white'}} > Privacy Policy</Text>
+          </Body>
+
+        </Header>
           <H1>Privacy Policy of Wthy</H1>
 
 <Text>Wthy operates the WTHY website, which provides the SERVICE.</Text>

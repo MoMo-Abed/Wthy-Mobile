@@ -26,7 +26,7 @@ export class DrawerMenuMainView extends Component {
 
             <View style={{marginTop:60,height:'15%',justifyContent:'space-between'}} >
             <Text onPress={()=>Actions.PrivacyPolicyView()} style={{fontSize:20,fontWeight:'900'}} >Privacy Policy</Text>
-            <Text onPress={()=>console.log('Help clicked')} style={{fontSize:20,fontWeight:'900'}} >Help</Text>
+            <Text onPress={()=>Actions.HelpPageView()} style={{fontSize:20,fontWeight:'900'}} >Help</Text>
             <Text onPress={()=>console.log('Setting clicked')} style={{fontSize:20,fontWeight:'900'}} >Settings</Text>
 
                 
