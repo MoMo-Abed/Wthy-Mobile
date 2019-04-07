@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { View, Text } from 'react-native'
 import { connect } from 'react-redux'
-import {Header, Left, Body, Right,Drawer } from 'native-base';
+import {Header, Left, Body, Right,Drawer,Tabs,Tab,ScrollableTab,Container } from 'native-base';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { Actions } from 'react-native-router-flux';
 import DrawerMenuMainView from './DrawerMenuMainView'
@@ -14,10 +14,11 @@ export class MainPageView extends Component {
  
   render() {
     return (
+      
       <Drawer  content={<DrawerMenuMainView/>} open={this.state.MenuOpen}     tapToClose={true}  >
 
-<View>
-        <Header style={{backgroundColor:'#333333'}} androidStatusBarColor="#333333"  >
+<Container>
+        <Header hasTabs style={{backgroundColor:'#333333'}} androidStatusBarColor="#333333"  >
 
 
 
@@ -43,10 +44,30 @@ export class MainPageView extends Component {
 
 
           </Right>
-        </Header>
-      </View>
          
-        <Text> main </Text>
+        </Header>
+
+
+
+        <Tabs tabContainerStyle={{backgroundColor:'#333333'}} renderTabBar={()=> <ScrollableTab />}>
+
+
+          <Tab  tabStyle={{backgroundColor: '#333333'}} activeTabStyle={{backgroundColor:'#333333'}} heading="TODAY">
+          </Tab>
+          <Tab tabStyle={{backgroundColor: '#333333'}} activeTabStyle={{backgroundColor:'#333333'}}  heading="FORECAST">
+          </Tab>
+          <Tab tabStyle={{backgroundColor: '#333333'}} activeTabStyle={{backgroundColor:'#333333'}}  heading="RADAR">
+          </Tab>
+          <Tab tabStyle={{backgroundColor: '#333333'}} activeTabStyle={{backgroundColor:'#333333'}}  heading={"SUN & MOON"}>
+          </Tab>
+
+
+        </Tabs>
+
+
+        
+      </Container>
+         
       </Drawer>
     )
   }
