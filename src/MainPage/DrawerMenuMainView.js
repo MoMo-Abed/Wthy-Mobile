@@ -6,9 +6,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import { Actions } from 'react-native-router-flux';
 
 export class DrawerMenuMainView extends Component {
-  static propTypes = {
-    prop: PropTypes
-  }
+ 
 
   render() {
     return (

@@ -14,11 +14,12 @@ export class Routes extends Component {
 <Scene hideNavBar key='MainPageView' component={MainPageView}  />
 <Scene hideNavBar key='PrivacyPolicyView'  component={PrivacyPolicyMainView}  />
 <Scene hideNavBar key='HelpPageView'  component={HelpPageMainView}  />
+<Scene hideNavBar key='SearchPage' initial component={SearchPageView} />
+
 
 </Scene>
 
 
-<Scene hideNavBar key='SearchPage' initial component={SearchPageView} />
           </Stack>
       </Router>
     )
