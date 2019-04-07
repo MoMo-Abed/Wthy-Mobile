@@ -3,7 +3,7 @@ import { View, Text } from 'react-native'
 import { connect } from 'react-redux'
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {Header, Left, Body, Right } from 'native-base';
-
+import { ShowMenu } from '../Actions/wthyActions'
 export class HeaderMainView extends Component {
  
 
@@ -12,7 +12,7 @@ export class HeaderMainView extends Component {
       <View>
         <Header style={{backgroundColor:'#333333'}} androidStatusBarColor="#333333"  >
           <Left>
-            <Icon color='white' onPress={()=>console.log('menu clicked')}    size={20} name='bars' />
+            <Icon color='white' onPress={()=>this.props.ShowMenu(true)}    size={20} name='bars' />
           </Left>
           <Body>
           <Text style={{fontSize:15,color:'white'}} >Cairo</Text>
@@ -37,8 +37,6 @@ const mapStateToProps = (state) => ({
   
 })
 
-const mapDispatchToProps = {
-  
-}
 
-export default connect(mapStateToProps, mapDispatchToProps)(HeaderMainView)
+
+export default connect(mapStateToProps, {ShowMenu})(HeaderMainView)

@@ -8,7 +8,7 @@ export class MainPageView extends Component {
  
   render() {
     return (
-      <Drawer  content={<DrawerMenuMainView/>}  open={true} tapToClose={true}  >
+      <Drawer  content={<DrawerMenuMainView/>} acceptTap={true}   tapToClose={true}  >
           <HeaderMainView/>
         <Text> main </Text>
       </Drawer>
@@ -17,11 +17,11 @@ export class MainPageView extends Component {
 }
 
 const mapStateToProps = (state) => ({
+    ShowMenu: state.Weather.ShowMenu
+
   
 })
 
-const mapDispatchToProps = {
-  
-}
 
-export default connect(mapStateToProps, mapDispatchToProps)(MainPageView)
+
+export default connect(mapStateToProps)(MainPageView)

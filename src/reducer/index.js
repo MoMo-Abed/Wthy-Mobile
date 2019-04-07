@@ -5,4 +5,5 @@ import ProfileReducer from './ProfileReducer'
 import WeatherReducer from './WeatherReducer'
 export default combineReducers({
     Auth: AuthReducer,
+    Weather: WeatherReducer,
 });
