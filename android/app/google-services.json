@@ -1,0 +1,59 @@
+{
+  "project_info": {
+    "project_number": "374233382116",
+    "firebase_url": "https://wthy-6e64a.firebaseio.com",
+    "project_id": "wthy-6e64a",
+    "storage_bucket": "wthy-6e64a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:374233382116:android:25c9faafe13f52c2",
+        "android_client_info": {
+          "package_name": "com.mobilewether"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbHzuxuQkPXOUPfDElYFgQh0kUqaTKLm4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "374233382116-o3rilur7m3ipdlh34nhe54hhecp7a7d6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:374233382116:android:d6cea14a0bc3635c",
+        "android_client_info": {
+          "package_name": "com.wthy"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbHzuxuQkPXOUPfDElYFgQh0kUqaTKLm4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "374233382116-o3rilur7m3ipdlh34nhe54hhecp7a7d6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
