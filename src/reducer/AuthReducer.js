@@ -13,12 +13,8 @@ const initialState = {
     signUpLoading: false,
     LoginLoading: false,
     Profile:null,
-    weather: [],
-
-    cardWeather: {
-      
-
-
+    weather: [
+      {
         "cod": "200",
         "message": 0.0042,
         "cnt": 5,
@@ -210,6 +206,14 @@ const initialState = {
           "population": 7993
         }
       
+      }
+    ],
+
+    cardWeather: {
+      
+
+
+       
     }
 
     

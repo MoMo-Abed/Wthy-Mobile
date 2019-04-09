@@ -5,19 +5,35 @@ import {Header, Left, Body, Right,Drawer,Tabs,Tab,ScrollableTab,Container } from
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { Actions } from 'react-native-router-flux';
 import DrawerMenuMainView from './DrawerMenuMainView'
+import TodayMainView from './TodayPage/TodayMainView'
 export class MainPageView extends Component {
 
   state={
     MenuOpen: false
 
   }
+
+  RenderCityName(){
+    if (this.props.weather){
+      return(
+<Body>
+
+          
+      <Text style={{fontSize:15,color:'white'}} >{this.props.weather[0].city.name}</Text>
+      <Text style={{color:'white',fontSize:10}} >{this.props.weather[0].city.country}</Text>
+      </Body>
+)
+    }else{return null}
+  }
+
  
   render() {
     return (
       
       <Drawer  content={<DrawerMenuMainView/>} open={this.state.MenuOpen}     tapToClose={true}  >
 
-<Container>
+      <Container>
+
         <Header hasTabs style={{backgroundColor:'#333333'}} androidStatusBarColor="#333333"  >
 
 
@@ -29,11 +45,7 @@ export class MainPageView extends Component {
 
 
 
-          <Body>
-          <Text style={{fontSize:15,color:'white'}} >Cairo</Text>
-          <Text style={{color:'white',fontSize:10}} >EG</Text>
-          </Body>
-
+          {this.RenderCityName()}
 
 
           <Right>
@@ -53,6 +65,7 @@ export class MainPageView extends Component {
 
 
           <Tab  tabStyle={{backgroundColor: '#333333'}} activeTabStyle={{backgroundColor:'#333333'}} heading="TODAY">
+          <TodayMainView/>
           </Tab>
           <Tab tabStyle={{backgroundColor: '#333333'}} activeTabStyle={{backgroundColor:'#333333'}}  heading="FORECAST">
           </Tab>
@@ -74,6 +87,7 @@ export class MainPageView extends Component {
 }
 
 const mapStateToProps = (state) => ({
+  weather: state.Auth.weather
 
   
 })

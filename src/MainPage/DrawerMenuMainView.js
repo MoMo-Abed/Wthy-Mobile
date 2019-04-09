@@ -18,7 +18,7 @@ export class DrawerMenuMainView extends Component {
 
         <View   style={{flexDirection:'row',justifyContent:'space-between',borderBottomWidth:2,borderBottomColor:'gray',}} >
             <Text style={{fontSize:20,fontWeight:'900'}} >Locations</Text>
-            <Icon onPress={()=>console.log('add city clicked')} name='edit' style={{marginTop:5,paddingBottom:5}} size={25} />
+            <Icon onPress={()=>Actions.SearchPage()} name='edit' style={{marginTop:5,paddingBottom:5}} size={25} />
             </View  >
 
 
