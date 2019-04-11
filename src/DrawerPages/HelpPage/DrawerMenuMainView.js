@@ -4,9 +4,8 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { Actions } from 'react-native-router-flux';
-import LOGO from './TodayPage/icons/LOGO.png'
-import { getweatherByID } from '../Actions/wthyActions'
-
+import LOGO from '../../MainPage/TodayPage/icons/LOGO.png'
+import { getweatherByID } from '../../Actions/wthyActions'
 export class DrawerMenuMainView extends Component {
 
   renderLocations(){
@@ -68,7 +67,8 @@ export class DrawerMenuMainView extends Component {
 
 const mapStateToProps = (state) => ({
 
-  cardWeather:state.Auth.cardWeather  
+  cardWeather: state.Auth.cardWeather
+  
 })
 
 const mapDispatchToProps = {

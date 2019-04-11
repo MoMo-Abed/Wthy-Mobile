@@ -64,6 +64,7 @@ export class SearchPageView extends Component {
           <Form style={{width:'30%',marginLeft:280,marginTop:-50}} >
 
           <Picker 
+          textStyle={{fontSize:40}}
               mode="dropdown"
               iosIcon={<Icon name="arrow-down" />}
               headerBackButtonText="Baaack!"

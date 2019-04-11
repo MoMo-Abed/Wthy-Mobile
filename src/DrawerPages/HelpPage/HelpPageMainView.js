@@ -2,21 +2,29 @@ import React, { Component } from 'react'
 import { View, Text } from 'react-native'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import {H1,H2,Header,Left,Body,Form,Button,Input,Item,Label } from 'native-base';
+import {H1,H2,Header,Left,Body,Form,Button,Input,Item,Label,Drawer } from 'native-base';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import DrawerMenuMainView from './DrawerMenuMainView'
 
 export class HelpPageMainView extends Component {
-  static propTypes = {
-    prop: PropTypes
+  
+  state ={
+    MenuOpen:false
+
   }
 
   render() {
     return (
+
+      <Drawer  content={<DrawerMenuMainView/>} open={this.state.MenuOpen}     tapToClose={true}  >
+
       <View>
 
  <Header style={{backgroundColor:'#333333'}} androidStatusBarColor="#333333"   >
         <Left>
-            <Icon color='white' onPress={()=>console.log('menu clicked')}    size={20} name='bars' />
+            <Icon color='white' onPress={()=>{this.setState({
+                  MenuOpen: true
+            })}}        size={20} name='bars' />
           </Left>
           <Body>
           <Text style={{fontSize:20,color:'white'}} >Help</Text>
@@ -48,6 +56,8 @@ export class HelpPageMainView extends Component {
 
 
         </View>
+        </Drawer>
+
     )
   }
 }

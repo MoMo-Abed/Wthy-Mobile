@@ -6,6 +6,7 @@ import PrivacyPolicyMainView from './DrawerPages/Privacy Policy/PrivacyPolicyMai
 import HelpPageMainView from './DrawerPages/HelpPage/HelpPageMainView'
 import SearchPageView from './MainPage/SearchPage/SearchPageView'
 import TodayMainView from './MainPage/TodayPage/TodayMainView'
+import ShareFun from './MainPage/TodayPage/ShareFun'
 export class Routes extends Component {
   render() {
     return (
@@ -21,6 +22,7 @@ export class Routes extends Component {
 
 
 </Scene>
+
 
 
           </Stack>

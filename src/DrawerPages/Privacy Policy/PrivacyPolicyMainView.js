@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
-import { Text, View , ScrollView,Dimensions } from 'react-native'
-import {H1,H2,Header,Left,Body } from 'native-base';
+import { Text, View , ScrollView,Dimensions, } from 'react-native'
+import {H1,H2,Header,Left,Body,Drawer } from 'native-base';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import DrawerMenuMainView from './DrawerMenuMainView'
 
 const {height} = Dimensions.get('window');
 
@@ -9,6 +10,7 @@ export default class PrivacyPolicyMainView extends Component {
 
   state={
     screenHeight: 0,
+    MenuOpen:false
   }
 
   onContentSizeChange = (contentWidth,contentHeight) => {
@@ -23,6 +25,7 @@ export default class PrivacyPolicyMainView extends Component {
     const scrollEnabled = this.state.screenHeight > height;
 
     return (
+      <Drawer  content={<DrawerMenuMainView/>} open={this.state.MenuOpen}     tapToClose={true}  >
       <ScrollView
                     scrollEnabled={scrollEnabled}
                     onContentSizeChange={this.onContentSizeChange}
@@ -30,7 +33,9 @@ export default class PrivacyPolicyMainView extends Component {
       <View>
         <Header style={{backgroundColor:'#333333'}} androidStatusBarColor="#333333"   >
         <Left>
-            <Icon color='white' onPress={()=>console.log('menu clicked')}    size={20} name='bars' />
+            <Icon color='white' onPress={()=>{this.setState({
+                  MenuOpen: true
+            })}}    size={20} name='bars' />
           </Left>
           <Body>
           <Text style={{fontSize:20,color:'white'}} > Privacy Policy</Text>
@@ -87,6 +92,8 @@ export default class PrivacyPolicyMainView extends Component {
 
       </View>
       </ScrollView>
+      </Drawer>
+
     )
   }
 }
